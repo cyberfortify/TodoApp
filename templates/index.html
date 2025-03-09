@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <div class="todo-container p-4">
+            <!-- Add Task Form -->
+            <div class="row mb-4">
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="taskInput" placeholder="Enter new task...">
+                </div>
+                <div class="col-md-4 mt-2 mt-md-0">
+                    <button class="btn btn-custom w-100" id="addTaskBtn">
+                        <i class="fas fa-plus me-2"></i>Add Task
+                    </button>
+                </div>
+            </div>
+
+            <!-- Task Filters -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="btn-group w-100">
+                        <button class="btn btn-outline-secondary active" data-filter="all">All</button>
+                        <button class="btn btn-outline-secondary" data-filter="active">Active</button>
+                        <button class="btn btn-outline-secondary" data-filter="completed">Completed</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Task List -->
+            <div class="task-list" id="taskList">
+                <!-- Sample Task -->
+                <div class="task-item p-3 mb-2 d-flex align-items-center">
+                    <input type="checkbox" class="form-check-input me-3">
+                    <div class="task-text flex-grow-1">Sample Task 1</div>
+                    <button class="btn btn-sm btn-danger">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics -->
+        <div class="row mt-4">
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Tasks</h5>
+                        <p class="card-text fs-3" id="totalTasks">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Tasks Left</h5>
+                        <p class="card-text fs-3" id="remainingTasks">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Completed</h5>
+                        <p class="card-text fs-3" id="completedTasks">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

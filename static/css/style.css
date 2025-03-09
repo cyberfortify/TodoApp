@@ -1,0 +1,92 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+}
+
+body {
+    background-color: #f8f9fa;
+    padding-top: 80px;
+}
+
+.navbar-custom {
+    background-color: #2c3e50;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #ecf0f1;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #3498db;
+}
+
+.navbar-toggler-custom {
+    border-color: #ecf0f1;
+}
+.task-item.editing {
+    background-color: #fff9e6;
+}
+.edit-input {
+    display: none;
+}
+.task-item.editing .edit-input {
+    display: block;
+}
+
+.task-item.editing {
+    background-color: #fff9e6;
+    border-left-color: #ffc107;
+}
+
+.edit-input {
+    display: none;
+    margin-right: 10px;
+}
+
+.task-item.editing .edit-input {
+    display: block;
+}
+
+.task-item.editing .task-text {
+    display: none;
+}
+
+.btn-group {
+    margin-left: 10px;
+}
+
+.todo-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.task-item {
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.task-item:hover {
+    transform: translateX(5px);
+}
+
+.completed {
+    background-color: #f8f9fa;
+    border-left-color: #6c757d;
+    opacity: 0.7;
+}
+
+.completed .task-text {
+    text-decoration: line-through;
+}
+
+.btn-custom {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-custom:hover {
+    background-color: #2980b9;
+    color: white;
+}
