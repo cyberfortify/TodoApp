@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
+import os
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -65,5 +66,6 @@ def handle_todo(id):
         return jsonify({'message': 'Todo deleted successfully'}), 200
 
 if __name__ == '__main__':
+    port = int(os.environ.get("PORT", 5000))
     initialize_database()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=port, debug=True)
